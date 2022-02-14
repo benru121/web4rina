@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: red;
+            text-align: right;
+            padding: 10px;
+        }
+        
+        header img {
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        /* Style the list */
+        
+        ul.tab {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        /* Float the list items side by side */
+        
+        ul.tab li {
+            float: left;
+        }
+        /* Style the links inside the list items */
+        
+        ul.tab li a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        /* Change background color of links on hover */
+        
+        ul.tab li a:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        ul.tab li a:focus,
+        .active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        
+        .tabcontent {
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+            /* Fading effect takes 1 second */
+        }
+        
+        .tabcontent p {
+            font-size: 20px;
+        }
+        
+        #welcome {
+            /* background: royalblue; */
+            background-image: url("./assets/img/bg_heart.jpg");
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        @-webkit-keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="red lighten-4">
+    <header>
+        <a href="./index.html" class="btn green">BACK</a>
+        <img src="./assets/img/rina_img.jpg" width="40" height="40">
+    </header>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="row">
+                <div class="col s12 m10 l10 offset-m1 offset-l1">
+                    <ul class="tab">
+                        <li><a href="#" class="tablinks" onclick="openCity(event, 'London')">Greetings</a></li>
+                    </ul>
+                    <div id="London" class="tabcontent">
+                        <h3>Greetings!</h3>
+                        <p>Dear Rinzzyy,</p><br>
+                        <p>
+                            First and foremost, I just want to greet you a happy happy valentines day 🧡💛💚 Thank you for always being there for me, no matter what happens you're always there for me. Thank you for being a part of my life. Thank for treating me like a family, Even
+                            if we don't see each other, I just wish you still remember those memories we create together.
+                            <br><br> Thank you for being there with me through all seasons of life whether it's the ups and downs, the beautiful or the ugly. Thank you for loving me and giving me support no matter what I'm going through and for being
+                            happy when I'm happy and sad when I'm sad. I don't care what anyone else thinks, but I really think you're the best.
+                            <br><br> Your life inspires us all. You're a bundle of positivity, a beacon of possibility giving us all the strength to move on. You're the best a friend of mine and a dear friend to so many more people we know. There's no
+                            dull moment around you. You're the type of person everyone loves to love. Your laugh, your laughter, your presence, your positive energy, give me so much joy. I am addicted to your tender loving care. I am addicted to your
+                            love, who wouldn't? People need you because you genuinely care. You are many people's shoulder to lean on. You lend them an helping hand in their times of need. You enrich lives more than anyone else I know.
+                            <br><br> Sometimes I think you're an angel in disguise. You're way stronger than you know. You are incredibly powerful. You are mindlessly beautiful. You are kind. You are grounded. You are awesome and I totally, absolutely
+                            love you. If you think I'm writing all of this to make you feel good, you're right, because you deserve to know the truth about yourself and you deserve the feeling of goodness that comes with that knowledge. Always take care
+                            of yourself.
+                            <br><br>
+                            <i>Sincerely, Your Dearest Friend, Benru Macatangay</i>
+                        </p>
+                    </div>
+
+                    <div id="welcome" class="">
+                        <h3>WELCOME</h3>
+                        <h5>To My Web Rinzzyy!!!</h5>
+                        <h4>(Rina Espino Villanueva)</h4>
+                        <br><br>
+                        <h5> Happy Valentines Day ! <br><br> 💚💛💙 </h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i].classList.remove("active");
+                document.getElementById("welcome").style.display = "none";
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
